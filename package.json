@@ -1,0 +1,22 @@
+{
+  "name": "next-dev-portfolio",
+  "version": "1.0.0",
+  "description": "My developer portfolio create with nextJS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  },
+  "author": "Paul Bruwer",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^5.3.2",
+    "next": "^13.5.2",
+    "react": "^18.2.0",
+    "react-bootstrap": "^2.8.0",
+    "react-dom": "^18.2.0",
+    "react-icons": "^4.11.0"
+  }
+}
