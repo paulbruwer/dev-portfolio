@@ -1,6 +1,6 @@
 import { Col, Row, Container } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
-import ProfileCol from "../components/profileCol";
+import ProfileCol from "../components/ProfileCol";
 import AboutMe from "../components/AboutMe";
 import WorkExperience from "../components/WorkExperience";
 import Skills from "../components/Skills";
