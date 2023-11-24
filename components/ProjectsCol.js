@@ -49,6 +49,7 @@ export default () => (
         </Stack>
         <br />
       </li>
+      <hr/>
       <li>
         <h3>
           MediaScout
