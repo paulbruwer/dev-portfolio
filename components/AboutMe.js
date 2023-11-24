@@ -12,7 +12,7 @@ export default () => (
     <hr />
     <p>
       I am an astute and results driven business professional, specializing in
-      Engineering and maintenance, and looking to start out as a full stack developer. 
+      engineering and maintenance, and looking to start out as a full stack developer. 
       Striving for excellence, practicing integrity, and always upholding my ethical
       standards. I have skilfully balanced organizational objectives and
       successful relationships, strategizing and implementing ways in which to
