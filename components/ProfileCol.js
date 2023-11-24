@@ -49,9 +49,9 @@ export default () => (
     <hr />
     <p className="acknowledgment">
       This webpage was made using
-      <a href="https://react.dev/" target="_blank" rel="noopener norefferer">
+      <a href="https://nextjs.org/" target="_blank" rel="noopener norefferer">
         {" "}
-        react
+        NextJS
       </a>
       . For the full source code, please visit
       <a

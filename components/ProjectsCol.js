@@ -14,6 +14,41 @@ export default () => (
     </h2>
     <hr />
     <ul style={{ color: "rgba(48, 64, 89, 0.801)" }}>
+    <li>
+        <h3>
+          {"Production Inventory Application (PIA)"}
+          <a
+            href="https://github.com/paulbruwer/productionInventoryApplication"
+            target="_blank"
+            rel="noopener norefferer"
+          >
+            <BiLogoGithub />
+          </a>
+        </h3>
+        <p>Production tracking and inventory management application for small manufacturing operations.</p>
+        <p>The purpose was to create a lean database application that is easy to use.</p>
+        <Stack direction="horizontal" gap={2}>
+          <Badge pill bg="primary">
+            MongoDB
+          </Badge>
+          <Badge pill bg="primary">
+            Mongoose
+          </Badge>
+          <Badge pill bg="primary">
+            React
+          </Badge>
+          <Badge pill bg="primary">
+            Express
+          </Badge>
+          <Badge pill bg="primary">
+            HTML
+          </Badge>
+          <Badge pill bg="primary">
+            CSS
+          </Badge>
+        </Stack>
+        <br />
+      </li>
       <li>
         <h3>
           MediaScout

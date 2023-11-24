@@ -28,6 +28,9 @@ export default () => (
         NodeJS
       </Badge>
       <Badge pill bg="primary">
+        NextJS
+      </Badge>
+      <Badge pill bg="primary">
         React
       </Badge>
       <Badge pill bg="primary">
