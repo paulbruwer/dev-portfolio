@@ -5,6 +5,7 @@ import {
   BiLogoGithub,
   BiLogoLinkedinSquare,
 } from "react-icons/bi";
+import { BsLink45Deg } from "react-icons/bs";
 import { Image } from "react-bootstrap";
 
 export default () => (
@@ -27,6 +28,18 @@ export default () => (
           <BiLogoGmail />
         </i>
         paulbruwer56@gmail.com
+      </li>
+      <li className="portfolio">
+      <a
+        className="list-icon"
+        style={{color: "gray !important"}}
+        href="https://www.hyperiondev.com/portfolio/156643/"
+        target="_blank"
+        rel="noopener norefferer"
+      >
+        <BsLink45Deg />
+      </a>
+        HyperionDev Portfolio
       </li>
     </ul>
     <hr />
