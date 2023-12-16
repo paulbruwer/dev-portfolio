@@ -18,7 +18,7 @@ export default () => (
       <li>
         <h3><a>
             <BiLogoGmail />
-          </a> paulbruwer56@gmail.com</h3>
+          </a>paulbruwer56@gmail.com</h3>
       </li>
       <li>
         <h3>
@@ -29,7 +29,7 @@ export default () => (
           >
             <BiLogoLinkedinSquare />
           </a>
-          linkedIn
+          LinkedIn
         </h3>
       </li>
       <li>
