@@ -253,32 +253,82 @@ export default function Page() {
                 </div>
                 <div>
                   <p className="subhead">Products</p>
-                  <ul className="reset">
-                    <li>
-                      <Link
-                        href="https://aqua-clash.com/"
-                        target="_blank"
-                        className="link"
-                      >
-                        <strong>AquaClash</strong>
-                      </Link>
-                      : Text-based MMO backend (auth, gameplay, leaderboards,
-                      notifications); scheduled jobs and hourly aggregations via
-                      Lambda/EventBridge.
-                    </li>
-                    <li>
-                      <Link
-                        href="https://videa-app.com/"
-                        target="_blank"
-                        className="link"
-                      >
-                        <strong>Videa</strong>
-                      </Link>
-                      : Social video-bounty platform (media uploads via S3
-                      presigned URLs, feed/notification services); payment +
-                      messaging integrations.
-                    </li>
-                  </ul>
+
+                  <div className="project-grid">
+                    {/* AquaClash — text-based MMO */}
+                    <Link
+                      href="https://aqua-clash.com/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="card pad-6 project-card"
+                    >
+                      <div className="project-logo" aria-hidden="true">
+                        <Image
+                          src="/static/ac-logo.png"
+                          alt="AquaClash logo"
+                          width={96}
+                          height={96}
+                          style={{
+                            width: 96,
+                            height: 96,
+                            objectFit: "contain",
+                            display: "block",
+                          }}
+                        />
+                      </div>
+                      <div className="project-meta">
+                        <h4 className="project-name">AquaClash</h4>
+                        <p className="project-desc">
+                          Text-based MMO RPG integrated with Meta
+                        </p>
+                        <div className="project-chips">
+                          <span className="project-chip">Node.js + TS</span>
+                          <span className="project-chip">MongoDB</span>
+                          <span className="project-chip">
+                            Lambda/EventBridge
+                          </span>
+                          <span className="project-chip">Meta (WhatsApp)</span>
+                        </div>
+                      </div>
+                    </Link>
+
+                    {/* Videa — social video-bounty */}
+                    <Link
+                      href="https://videa-app.com/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="card pad-6 project-card"
+                    >
+                      <div className="project-logo" aria-hidden="true">
+                        <Image
+                          src="/static/videa-logo.png"
+                          alt="Videa logo"
+                          width={96}
+                          height={96}
+                          style={{
+                            width: 96,
+                            height: 96,
+                            objectFit: "contain",
+                            display: "block",
+                          }}
+                        />
+                      </div>
+                      <div className="project-meta">
+                        <h4 className="project-name">Videa</h4>
+                        <p className="project-desc">
+                          Social video-bounty platform
+                        </p>
+                        <div className="project-chips">
+                          <span className="project-chip">S3 + CloudFront</span>
+                          <span className="project-chip">MongoDB</span>
+                          <span className="project-chip">
+                            Lambda/EventBridge
+                          </span>
+                          <span className="project-chip">Node.js + TS</span>
+                        </div>
+                      </div>
+                    </Link>
+                  </div>
                 </div>
               </div>
             </details>
