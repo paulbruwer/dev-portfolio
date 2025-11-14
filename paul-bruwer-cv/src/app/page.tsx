@@ -10,6 +10,7 @@ import {
   IconMap,
   IconRow,
 } from "@/components/IconText";
+import HamburgerNav from "@/components/HamburgerNav";
 
 export default function Page() {
   useEffect(() => {
@@ -51,6 +52,8 @@ export default function Page() {
 
   return (
     <div className="container">
+      <HamburgerNav />
+
       {/* Header */}
       <header className="header">
         <div className="flex-row">
@@ -67,9 +70,7 @@ export default function Page() {
 
           <div>
             <h1 className="h1 gradient-text">Paul Bruwer</h1>
-            <h2 className="h2">
-              Senior Backend Engineer &amp; AWS Practitioner
-            </h2>
+            <h2 className="h2">Senior Backend Engineer</h2>
             <p style={{ color: "#374151", maxWidth: 640, margin: 0 }}>
               Product-minded backend engineer with end-to-end ownership
               experience (APIs, data models, infrastructure, CI/CD). Reliable
@@ -82,8 +83,8 @@ export default function Page() {
         <div className="card pad-6">
           <IconRow icon={<IconMap />}>South Africa (UTC+2)</IconRow>
           <IconRow icon={<IconMail />}>
-            <Link href="mailto:paul@example.com" className="link">
-              paul@example.com
+            <Link href="mailto:paulbruwer56@gmail.com" className="link">
+              paulbruwer56@gmail.com
             </Link>
           </IconRow>
           <IconRow icon={<IconLinkedIn />}>
@@ -108,7 +109,7 @@ export default function Page() {
       </header>
 
       {/* Skills */}
-      <section className="section">
+      <section id="skills" className="section">
         <h2 className="section-title">Core Skills</h2>
 
         <div className="grid grid-3">
@@ -122,7 +123,7 @@ export default function Page() {
             </ul>
           </div>
 
-          <div className="panel">
+          <div className="card pad-6">
             <h3 className="h3 text-secondary mb-2">Data</h3>
             <ul className="reset">
               <li>MongoDB (Mongoose)</li>
@@ -130,7 +131,7 @@ export default function Page() {
             </ul>
           </div>
 
-          <div className="panel">
+          <div className="card pad-6">
             <h3 className="h3 text-secondary mb-2">Cloud/DevOps</h3>
             <ul className="reset">
               <li>AWS (ECS, EC2, ALB, VPC, ECR, S3, CloudFront)</li>
@@ -139,7 +140,7 @@ export default function Page() {
             </ul>
           </div>
 
-          <div className="panel">
+          <div className="card pad-6">
             <h3 className="h3 text-secondary mb-2">APIs/Integrations</h3>
             <ul className="reset">
               <li>REST</li>
@@ -149,7 +150,7 @@ export default function Page() {
             </ul>
           </div>
 
-          <div className="panel">
+          <div className="card pad-6">
             <h3 className="h3 text-secondary mb-2">Testing/Docs</h3>
             <ul className="reset">
               <li>Jest</li>
@@ -158,7 +159,7 @@ export default function Page() {
             </ul>
           </div>
 
-          <div className="panel">
+          <div className="card pad-6">
             <h3 className="h3 text-secondary mb-2">Practices</h3>
             <ul className="reset">
               <li>Microservices</li>
@@ -171,120 +172,233 @@ export default function Page() {
         </div>
       </section>
 
-      {/* Experience */}
-      <section className="section">
+      {/* Experience (compact cards) */}
+      <section id="experience" className="section">
         <h2 className="section-title">Experience</h2>
 
-        <div className="card pad-8 mb-10">
-          <div
-            style={{
-              display: "flex",
-              justifyContent: "space-between",
-              alignItems: "flex-start",
-              marginBottom: "1rem",
-            }}
-          >
-            <div>
-              <h3 className="h3">Videa Tech</h3>
-              <p style={{ color: "#6B7280", margin: 0 }}>
-                Senior Backend Engineer &amp; AWS Owner
-              </p>
+        <div className="exp-grid">
+          {/* Videa Tech */}
+          <div className="card pad-8 exp-card">
+            <div className="exp-header">
+              <div>
+                <h3 className="exp-title">Videa Tech</h3>
+                <p className="exp-sub">
+                  Senior Backend Engineer &amp; AWS Owner
+                </p>
+              </div>
+              <div className="exp-dates">Aug 2024 - Present</div>
             </div>
-            <div style={{ color: "#6B7280" }}>[Dates per LinkedIn]</div>
+
+            <p className="kicker">
+              End-to-end backend + infrastructure ownership across two products
+              under Videa Tech.
+            </p>
+
+            <ul className="achv">
+              <li>
+                Designed and shipped Node.js/TypeScript services with MongoDB
+                for auth, media, feeds, and analytics.
+              </li>
+              <li>
+                Ran AWS architecture (ECS, ALB, VPC, ECR, S3, CloudFront, SES)
+                with serverless ops via Lambda/EventBridge.
+              </li>
+              <li>
+                Built CI/CD (Bitbucket Pipelines → ECS) with
+                environment-specific releases and secrets management.
+              </li>
+              <li>
+                Integrated Stripe (intents, webhooks) and Meta (WhatsApp
+                templates/webhooks) safely and idempotently.
+              </li>
+              <li>
+                Mentored a junior backend and a junior frontend dev; led PR
+                reviews and solution proposals.
+              </li>
+            </ul>
+
+            <div className="chips">
+              <span className="chip">Node.js + TypeScript</span>
+              <span className="chip">Express</span>
+              <span className="chip">MongoDB (Mongoose)</span>
+              <span className="chip">AWS ECS / Lambda</span>
+              <span className="chip">EventBridge / SNS</span>
+              <span className="chip">Docker</span>
+              <span className="chip">CI/CD (Bitbucket)</span>
+              <span className="chip">Stripe</span>
+              <span className="chip">Meta Graph API</span>
+            </div>
+
+            <details className="details">
+              <summary>
+                <span className="chev">▸</span> Show details
+              </summary>
+              <div className="details-content">
+                <div>
+                  <p className="subhead">Responsibilities</p>
+                  <ul className="reset">
+                    <li>
+                      API design, data modeling, observability, performance
+                      tuning, and failure recovery.
+                    </li>
+                    <li>
+                      Security: idempotent webhooks, input validation, and
+                      defensive rate-limiting where relevant.
+                    </li>
+                    <li>
+                      Operational runbooks and environment hygiene for
+                      branch/sandbox/prod.
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <p className="subhead">Products</p>
+                  <ul className="reset">
+                    <li>
+                      <Link
+                        href="https://aqua-clash.com/"
+                        target="_blank"
+                        className="link"
+                      >
+                        <strong>AquaClash</strong>
+                      </Link>
+                      : Text-based MMO backend (auth, gameplay, leaderboards,
+                      notifications); scheduled jobs and hourly aggregations via
+                      Lambda/EventBridge.
+                    </li>
+                    <li>
+                      <Link
+                        href="https://videa-app.com/"
+                        target="_blank"
+                        className="link"
+                      >
+                        <strong>Videa</strong>
+                      </Link>
+                      : Social video-bounty platform (media uploads via S3
+                      presigned URLs, feed/notification services); payment +
+                      messaging integrations.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </details>
           </div>
 
-          <p style={{ color: "#374151", marginTop: 0, marginBottom: "1rem" }}>
-            Two products built under Videa Tech with end-to-end backend and
-            infrastructure ownership.
-          </p>
-
-          <div style={{ display: "grid", gap: "1.25rem" }}>
-            <div>
-              <h4 className="h4 text-secondary mb-2">
-                Responsibilities &amp; Impact
-              </h4>
-              <ul className="reset">
-                <li>
-                  Backend architecture &amp; development in Node.js/TypeScript
-                  (Express) with MongoDB (Mongoose)
-                </li>
-                <li>
-                  Infrastructure ownership: AWS
-                  ECS/EC2/ALB/VPC/ECR/S3/CloudFront/SES; event workflows via SNS
-                  &amp; EventBridge; serverless tasks with Lambda
-                </li>
-                <li>
-                  CI/CD: Bitbucket Pipelines to ECS; environment-specific
-                  releases; secrets management
-                </li>
-                <li>
-                  Integrations: Stripe (payment flows, webhooks), Meta Graph API
-                  (WhatsApp templates/webhooks)
-                </li>
-                <li>
-                  Reliability: idempotent webhooks, structured logging, error
-                  handling, observability
-                </li>
-                <li>
-                  Leadership: managed and mentored junior developers; PR
-                  reviews; solution proposals
-                </li>
-              </ul>
+          {/* HyperionDev */}
+          <div className="card pad-8 exp-card">
+            <div className="exp-header">
+              <div>
+                <h3 className="exp-title">HyperionDev</h3>
+                <p className="exp-sub">Coding Mentor</p>
+              </div>
+              <div className="exp-dates">Apr 2024 - Jul 2024</div>
             </div>
 
-            <div>
-              <h4 className="h4 text-secondary mb-2">Products Shipped</h4>
-              <ul className="reset">
-                <li>
-                  <span className="bold">AquaClash</span> — text-based MMO
-                  backend (auth/gameplay data/leaderboards/notifications);
-                  scheduled jobs via Lambda/EventBridge
-                </li>
-                <li>
-                  <span className="bold">Videa</span> — social video-bounty
-                  platform (feed/media APIs, presigned S3 uploads); payment and
-                  messaging integrations
-                </li>
-              </ul>
+            <p className="kicker">
+              Mentored students on software fundamentals, code quality,
+              debugging, and problem-solving.
+            </p>
+
+            <ul className="achv">
+              <li>
+                Reviewed assignments and provided structured, actionable
+                feedback.
+              </li>
+              <li>
+                Guided best practices: clean code, tests, docs, and incremental
+                design.
+              </li>
+              <li>
+                Strengthened communication skills translating complex concepts
+                clearly.
+              </li>
+            </ul>
+
+            <div className="chips">
+              <span className="chip">Mentoring</span>
+              <span className="chip">Code Reviews</span>
+              <span className="chip">Testing Mindset</span>
+              <span className="chip">Clean Code</span>
             </div>
+
+            <details className="details">
+              <summary>
+                <span className="chev">▸</span> Show details
+              </summary>
+              <div className="details-content">
+                <div>
+                  <p className="subhead">Focus Areas</p>
+                  <ul className="reset">
+                    <li>
+                      Debugging strategies, problem decomposition, and
+                      readability.
+                    </li>
+                    <li>
+                      Feedback loops, documentation, and growth mindsets for
+                      juniors.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </details>
           </div>
         </div>
 
-        <div className="panel">
-          <div
-            style={{
-              display: "flex",
-              justifyContent: "space-between",
-              alignItems: "flex-start",
-              marginBottom: "1rem",
-            }}
-          >
-            <div>
-              <h3 className="h3">HyperionDev</h3>
-              <p style={{ color: "#6B7280", margin: 0 }}>Coding Mentor</p>
-            </div>
-            <div style={{ color: "#6B7280" }}>[Dates per LinkedIn]</div>
+        {/* Additional Experience (concise, transferable) */}
+        <div className="card pad-8 exp-card" style={{ marginTop: "1.25rem" }}>
+          <div className="exp-header">
+            <h3 className="exp-title">Additional Experience</h3>
           </div>
 
-          <ul className="reset" style={{ marginBottom: 0 }}>
-            <li>
-              Mentored students in software development fundamentals, code
-              quality, debugging, and problem-solving
-            </li>
-            <li>
-              Provided structured feedback on assignments, reviewed code, and
-              guided learners toward industry best practices
-            </li>
-            <li>
-              Strengthened communication skills and the ability to translate
-              complex concepts clearly
-            </li>
-          </ul>
+          {/* Apprentice → Interim Production Manager (pre-HyperionDev) */}
+          <div>
+            <div className="exp-header">
+              <div>
+                <h3 className="exp-title">Freedom Paper</h3>
+                <p className="exp-sub">
+                  Apprentice → Interim Production Manager{" "}
+                </p>
+              </div>
+              <div className="exp-dates">Jan 2017 - Dec 2022 · 6 yrs</div>
+            </div>
+            <ul className="achv">
+              <li>
+                Apprenticeship: supported senior operators with daily line
+                tasks, checklist-driven quality checks, and basic
+                troubleshooting under supervision.
+              </li>
+              <li>
+                Learned core shop-floor processes: safety procedures, materials
+                flow, and shift handover routines.
+              </li>
+              <li>
+                Interim role: assisted scheduling and shift coordination during
+                coverage periods; escalated incidents and tracked actions
+                against KPIs overseen by managers.
+              </li>
+              <li>
+                Contributed to simple SOP updates and small process tidy-ups
+                (e.g., clearer handover notes, tool/part labeling).
+              </li>
+              <li>
+                Experience informed later software habits: runbooks, measurable
+                quality gates, and reliable release handovers.
+              </li>
+            </ul>
+          </div>
+
+          <div className="chips">
+            <span className="chip">Apprenticeship</span>
+            <span className="chip">Interim Coordination</span>
+            <span className="chip">SOPs &amp; Safety</span>
+            <span className="chip">Quality Checks</span>
+            <span className="chip">Handover Discipline</span>
+          </div>
         </div>
       </section>
 
       {/* Integrations & Infra */}
-      <section className="section">
+      <section id="integrations" className="section">
         <h2 className="section-title">
           Selected Integrations &amp; Infrastructure
         </h2>
@@ -295,26 +409,26 @@ export default function Page() {
             <p className="m-0">Stripe payment intents &amp; webhooks</p>
           </div>
 
-          <div className="panel">
+          <div className="card pad-6">
             <h3 className="h3 text-secondary mb-2">
               Messaging &amp; Templates
             </h3>
             <p className="m-0">Meta (WhatsApp business templates/webhooks)</p>
           </div>
 
-          <div className="panel">
+          <div className="card pad-6">
             <h3 className="h3 text-secondary mb-2">Email</h3>
             <p className="m-0">Amazon SES</p>
           </div>
 
-          <div className="panel">
+          <div className="card pad-6">
             <h3 className="h3 text-secondary mb-2">
               Eventing &amp; Scheduling
             </h3>
             <p className="m-0">SNS, EventBridge, Lambda</p>
           </div>
 
-          <div className="panel">
+          <div className="card pad-6">
             <h3 className="h3 text-secondary mb-2">Media &amp; CDN</h3>
             <p className="m-0">S3 presigned uploads, CloudFront</p>
           </div>
@@ -322,7 +436,7 @@ export default function Page() {
       </section>
 
       {/* Risk Alignment */}
-      <section className="section card pad-8">
+      <section id="risk-alignment" className="section card pad-8">
         <h2 className="section-title">Senior Developer (Risk) Alignment</h2>
         <ul className="modern-list">
           <li>Microservices/API design and implementation</li>
@@ -339,7 +453,7 @@ export default function Page() {
       </section>
 
       {/* Education & Availability */}
-      <section className="grid grid-2">
+      <section id="education" className="grid grid-2">
         <div className="card pad-8">
           <h2 className="section-title">Education</h2>
           <p className="m-0">BSc IT (distance learning)</p>
