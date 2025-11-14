@@ -394,56 +394,108 @@ export default function Page() {
           </div>
         </div>
 
-        {/* Additional Experience (concise, transferable) */}
+        {/* Additional Experience (expandable) */}
         <div className="card pad-8 exp-card" style={{ marginTop: "1.25rem" }}>
           <div className="exp-header">
             <h3 className="exp-title">Additional Experience</h3>
           </div>
 
-          {/* Apprentice → Interim Production Manager (pre-HyperionDev) */}
-          <div>
-            <div className="exp-header">
-              <div>
-                <h3 className="exp-title">Freedom Paper</h3>
-                <p className="exp-sub">
-                  Apprentice → Interim Production Manager{" "}
-                </p>
-              </div>
-              <div className="exp-dates">Jan 2017 - Dec 2022 · 6 yrs</div>
-            </div>
-            <ul className="achv">
-              <li>
-                Apprenticeship: supported senior operators with daily line
-                tasks, checklist-driven quality checks, and basic
-                troubleshooting under supervision.
-              </li>
-              <li>
-                Learned core shop-floor processes: safety procedures, materials
-                flow, and shift handover routines.
-              </li>
-              <li>
-                Interim role: assisted scheduling and shift coordination during
-                coverage periods; escalated incidents and tracked actions
-                against KPIs overseen by managers.
-              </li>
-              <li>
-                Contributed to simple SOP updates and small process tidy-ups
-                (e.g., clearer handover notes, tool/part labeling).
-              </li>
-              <li>
-                Experience informed later software habits: runbooks, measurable
-                quality gates, and reliable release handovers.
-              </li>
-            </ul>
-          </div>
+          <details className="details" open={false}>
+            <summary>
+              <span className="chev">▸</span>
+              <span>
+                Freedom Paper — Apprentice → Interim Production Manager
+                <span style={{ color: "#6B7280" }}>
+                  {" "}
+                  · Jan 2017 – Dec 2022 (6 yrs)
+                </span>
+              </span>
+            </summary>
 
-          <div className="chips">
-            <span className="chip">Apprenticeship</span>
-            <span className="chip">Interim Coordination</span>
-            <span className="chip">SOPs &amp; Safety</span>
-            <span className="chip">Quality Checks</span>
-            <span className="chip">Handover Discipline</span>
-          </div>
+            <div className="details-content">
+              <div>
+                <div className="exp-header">
+                  <div>
+                    <h3 className="exp-title" style={{ margin: 0 }}>
+                      Freedom Paper
+                    </h3>
+                    <p className="exp-sub" style={{ margin: 0 }}>
+                      Apprentice → Interim Production Manager
+                    </p>
+                  </div>
+                  <div className="exp-dates">Jan 2017 - Dec 2022 · 6 yrs</div>
+                </div>
+
+                <ul className="achv">
+                  {/* Apprentice foundation */}
+                  <li>
+                    Apprenticeship: supported senior operators with daily line
+                    tasks, checklist-driven quality checks, and basic
+                    troubleshooting under supervision.
+                  </li>
+                  <li>
+                    Learned core shop-floor processes: safety procedures,
+                    materials flow, and shift handover routines.
+                  </li>
+
+                  {/* Hands-on technical responsibilities */}
+                  <li>
+                    Maintenance &amp; repair of semi-automated paper converting
+                    machinery and packing lines (mechanical, electrical,
+                    instrumentation fault finding) with thorough maintenance
+                    records.
+                  </li>
+                  <li>
+                    Fabrication and repair of machine parts (turning, milling,
+                    welding); restoration of decommissioned semi-automated
+                    equipment for production use.
+                  </li>
+
+                  {/* Interim/coverage responsibilities */}
+                  <li>
+                    Interim coordination: assisted scheduling and shift
+                    planning; reviewed and adjusted production schedules to meet
+                    output/downtime targets.
+                  </li>
+                  <li>
+                    Supported distribution operations: helped manage lift-truck
+                    operators, inventory personnel, and repair coordinators to
+                    keep daily dispatch running smoothly.
+                  </li>
+
+                  {/* Process, metrics, cross-functional */}
+                  <li>
+                    Identified and supported systems to measure process KPIs
+                    (throughput, defects, downtime); tracked issues and drove
+                    corrective actions with line leads.
+                  </li>
+                  <li>
+                    Liaised across maintenance, procurement, logistics, and QA
+                    to unblock production and align priorities.
+                  </li>
+
+                  {/* Carry-over to software practice */}
+                  <li>
+                    Experience informed later software habits: runbooks,
+                    measurable quality gates, reliable handovers, and incident
+                    follow-ups rooted in clear metrics.
+                  </li>
+                </ul>
+              </div>
+
+              <div className="chips">
+                <span className="chip">Machinery Maintenance</span>
+                <span className="chip">Electrical &amp; Instrumentation</span>
+                <span className="chip">Fabrication &amp; Welding</span>
+                <span className="chip">Restoration Projects</span>
+                <span className="chip">Scheduling &amp; Shift Planning</span>
+                <span className="chip">Distribution Operations</span>
+                <span className="chip">KPI Tracking</span>
+                <span className="chip">Cross-functional Liaison</span>
+                <span className="chip">SOPs &amp; Safety</span>
+              </div>
+            </div>
+          </details>
         </div>
       </section>
 
@@ -506,8 +558,25 @@ export default function Page() {
       <section id="education" className="grid grid-2">
         <div className="card pad-8">
           <h2 className="section-title">Education</h2>
-          <p className="m-0">BSc IT (distance learning)</p>
+          <ul className="reset" style={{ margin: 0 }}>
+            <li>
+              <strong>HyperionDev</strong> — Web Development Course (2023).{" "}
+              <a
+                href="https://www.hyperiondev.com/portfolio/156643/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="link"
+              >
+                Portfolio
+              </a>
+            </li>
+            <li>
+              <strong>North-West University</strong> — BSc Information
+              Technology (current, distance learning)
+            </li>
+          </ul>
         </div>
+
         <div className="card pad-8">
           <h2 className="section-title">Availability</h2>
           <p className="m-0">
