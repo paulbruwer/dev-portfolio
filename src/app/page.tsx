@@ -59,7 +59,7 @@ export default function Page() {
         <div className="flex-row">
           <div className="avatar">
             <Image
-              src="/static/profile.jpg"
+              src="/static/profile.JPG"
               alt="Paul Bruwer"
               width={96}
               height={96}
