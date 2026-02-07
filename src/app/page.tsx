@@ -25,7 +25,7 @@ export default function Page() {
           }
         });
       },
-      { threshold: 0.1, rootMargin: "0px 0px -50px 0px" }
+      { threshold: 0.1, rootMargin: "0px 0px -50px 0px" },
     );
 
     sections.forEach((s) => observer.observe(s));
@@ -292,17 +292,17 @@ export default function Page() {
                       </div>
                     </Link>
 
-                    {/* Videa — social video-bounty */}
+                    {/* Vdea — social video-bounty */}
                     <Link
-                      href="https://videa-app.com/"
+                      href="https://vdea.app/"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="card pad-6 project-card"
                     >
                       <div className="project-logo" aria-hidden="true">
                         <Image
-                          src="/static/videa-logo.png"
-                          alt="Videa logo"
+                          src="/static/vdea-logo.png"
+                          alt="Vdea logo"
                           width={96}
                           height={96}
                           style={{
@@ -314,7 +314,7 @@ export default function Page() {
                         />
                       </div>
                       <div className="project-meta">
-                        <h4 className="project-name">Videa</h4>
+                        <h4 className="project-name">Vdea</h4>
                         <p className="project-desc">
                           Social video-bounty platform
                         </p>
@@ -324,6 +324,79 @@ export default function Page() {
                           <span className="project-chip">
                             Lambda/EventBridge
                           </span>
+                          <span className="project-chip">Node.js + TS</span>
+                        </div>
+                      </div>
+                    </Link>
+
+                    {/* Lanami */}
+                    <Link
+                      href="https://lanami.trade/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="card pad-6 project-card"
+                    >
+                      <div className="project-logo" aria-hidden="true">
+                        <Image
+                          src="/static/lanami-logo.png"
+                          alt="Vdea logo"
+                          width={96}
+                          height={96}
+                          style={{
+                            background: "#000",
+                            width: 96,
+                            height: 96,
+                            objectFit: "contain",
+                            display: "block",
+                          }}
+                        />
+                      </div>
+                      <div className="project-meta">
+                        <h4 className="project-name">Lanami</h4>
+                        <p className="project-desc">
+                          Trading indicator and expert advisor
+                        </p>
+                        <div className="project-chips">
+                          <span className="project-chip">
+                            Google SEO optimization
+                          </span>
+                          <span className="project-chip">NextJs</span>
+                          <span className="project-chip">Sanity</span>
+                          <span className="project-chip">Node.js + TS</span>
+                        </div>
+                      </div>
+                    </Link>
+
+                    {/* Padel.CNX */}
+                    <Link
+                      href="https://www.padelcnx.com/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="card pad-6 project-card"
+                    >
+                      <div className="project-logo" aria-hidden="true">
+                        <Image
+                          src="/static/padelcnx-logo.png"
+                          alt="Padel.CNX logo"
+                          width={96}
+                          height={96}
+                          style={{
+                            background: "#000",
+                            width: 96,
+                            height: 96,
+                            objectFit: "contain",
+                            display: "block",
+                          }}
+                        />
+                      </div>
+                      <div className="project-meta">
+                        <h4 className="project-name">Padel.CNX</h4>
+                        <p className="project-desc">
+                          Static website for premium indoor padel club based out
+                          of Chiang Mai, Thailand
+                        </p>
+                        <div className="project-chips">
+                          <span className="project-chip">NextJs</span>
                           <span className="project-chip">Node.js + TS</span>
                         </div>
                       </div>
